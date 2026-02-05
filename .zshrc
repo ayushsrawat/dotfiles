@@ -94,7 +94,5 @@ function up() {
 #fzf 
 source <(fzf --zsh)
 
-#export GEMINI_API_KEY="AIzaSyC6QBDrj9iysEvqLBbYvY0Q7KwGo4qqrfA"
-
 #go:=9.8m/s2,$PATH:$JAVA_HOME,const_Pie:=3.14
 
