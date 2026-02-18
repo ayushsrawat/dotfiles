@@ -55,3 +55,7 @@ macos-icon-frame = beige
 
 # when running go run main.go in ghostty i get this permission issue on the $TMPDIR file; here we are changing the temp directory under ghostty config
 env = "TMPDIR=/Users/ayushrawat/.tmp/go"
+
+# fix ssh issues with ghostty term (see https://ghostty.org/docs/help/terminfo)
+shell-integration-features = ssh-terminfo,ssh-env
+
