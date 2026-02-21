@@ -20,7 +20,7 @@ export PATH=${PATH}:/opt/homebrew/opt/mysql@8.4/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-25.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
-export PATH=${JAVA_HOME}:${PATH}
+export PATH=${JAVA_HOME}/bin:${PATH}
 
 #SDKROOT for gcc compiler /usr/include
 # after macos update, it doesn't need sdkroot anymore, proving it will create an library mismatch issue
