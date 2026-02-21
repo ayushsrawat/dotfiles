@@ -20,7 +20,7 @@ export PATH=${PATH}:/opt/homebrew/opt/mysql@8.4/bin
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-25.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-21.jdk/Contents/Home
 #export JAVA_HOME=/Library/Java/JavaVirtualMachines/amazon-corretto-11.jdk/Contents/Home
-export PATH=${PATH}:${JAVA_HOME}
+export PATH=${JAVA_HOME}:${PATH}
 
 #SDKROOT for gcc compiler /usr/include
 # after macos update, it doesn't need sdkroot anymore, proving it will create an library mismatch issue
@@ -52,7 +52,7 @@ zstyle ':vcs_info:git:*' formats '(%b)'
 # this allows the variable to update dynamically
 setopt PROMPT_SUBST
 
-NEW_PS1='%F{green}%n@%m%f:%F{blue}%~%f %F{yellow}${vcs_info_msg_0_}%f %# '
+NEW_PS1='%F{green}%n@%m%f:%F{blue}%~%f%F{yellow}${vcs_info_msg_0_}%f $ '
 export PS1="$NEW_PS1"
 # --- ---
 
@@ -96,3 +96,5 @@ source <(fzf --zsh)
 
 #go:=9.8m/s2,$PATH:$JAVA_HOME,const_Pie:=3.14
 
+
+. "$HOME/.local/bin/env"
