@@ -82,7 +82,13 @@ alias filebeat='/Users/ayushrawat/soft/filebeat/filebeat'
 #                 FUNCTIONS                       #
 ###################################################
 
-function port() { ps -ef | grep $1;}
+# macos
+function port() {
+    local result=$(lsof -nP -iTCP:$1 -sTCP:LISTEN)
+    echo "$result"
+    local pid=$(echo "$result" | awk 'NR>1 {print $2}')
+    [ -n "$pid" ] && echo -n "$pid" | pbcopy
+}
 
 function up() {
     local n=${1:-1};
